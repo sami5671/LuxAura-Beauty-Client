@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "brandname": "Didor",
+    "brandimage": "https://imgur.com/WNVkkCa.jpg"
+  },
+  {
+    "id": 2,
+    "brandname": "Estée Lauder",
+    "brandimage": "https://imgur.com/lgoqfcM.jpg"
+  },
+  {
+    "id": 3,
+    "brandname": "Loreal Paris",
+    "brandimage": "https://imgur.com/fWWlZVx.png"
+  },
+  {
+    "id": 4,
+    "brandname": "OLay",
+    "brandimage": "https://imgur.com/OnZZyMH.jpg"
+  },
+  {
+    "id": 5,
+    "brandname": "Revlon",
+    "brandimage": "https://imgur.com/HRDVfUx.jpg"
+  },
+  {
+    "id": 6,
+    "brandname": "Avon",
+    "brandimage": "https://imgur.com/MIuFYmi.jpg"
+  },
+  {
+    "id": 7,
+    "brandname": "Coty",
+    "brandimage": "https://imgur.com/MRloX1F.jpg"
+  }
+]

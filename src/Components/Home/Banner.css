@@ -1,0 +1,9 @@
+.background-img {
+  background: url("https://imgur.com/Cc8mHKF.jpg"),
+    linear-gradient(rgba(50, 48, 48, 0.1), rgba(0, 0, 0, 0.2));
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+}
