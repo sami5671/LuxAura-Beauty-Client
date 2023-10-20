@@ -6,7 +6,7 @@ const links = (
       <NavLink to="/">Home</NavLink>
     </li>
     <li>
-      <NavLink to="/activities">Add Product</NavLink>
+      <NavLink to="/addProduct">Add Product</NavLink>
     </li>
     <li>
       <NavLink to="/aboutUs">My Cart</NavLink>

@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Components/Root/Root";
 // import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Home from "./Components/Home/Home";
+import AddProduct from "./Components/AddProduct/AddProduct";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/addProduct",
+        element: <AddProduct></AddProduct>,
       },
     ],
   },
