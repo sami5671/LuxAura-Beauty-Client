@@ -6,6 +6,8 @@ import Root from "./Components/Root/Root";
 // import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import Home from "./Components/Home/Home";
 import AddProduct from "./Components/AddProduct/AddProduct";
+import BrandProduct from "./Components/StoreBrandProducts/BrandProduct";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +17,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/brandProduct/:id",
+        element: <BrandProduct></BrandProduct>,
+        loader: () => fetch("http://localhost:5000/brands"),
       },
       {
         path: "/addProduct",

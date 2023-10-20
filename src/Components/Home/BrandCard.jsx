@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const BrandCard = ({ cards }) => {
   //=============== destructure the object  ==========================
-  const { brandname, brandimage } = cards;
+  const { brandname, brandimage, id } = cards;
 
   // =================================================================
   return (
-    <Link to="">
+    <Link to={`/brandProduct/${id}`}>
       <div className="card bg-base-100 shadow-xl">
         <figure className="">
           <img
