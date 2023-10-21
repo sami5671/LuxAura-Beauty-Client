@@ -7,7 +7,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import React from "react";
+
 import auth from "../Firebase/Firebase.config";
 import { createContext } from "react";
 import { useEffect } from "react";

@@ -25,13 +25,16 @@ const AddProduct = () => {
     console.log(newProduct);
 
     // send data to server
-    fetch("http://localhost:5000/brands", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      "https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/brands",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -18,13 +18,16 @@ const BrandProductDetails = () => {
       rating,
     };
     // console.log(addToCart);
-    fetch("http://localhost:5000/cart", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(addToCart),
-    })
+    fetch(
+      "https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/cart",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(addToCart),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -30,13 +30,18 @@ const router = createBrowserRouter([
       {
         path: "/brandProduct/:id",
         element: <BrandProduct></BrandProduct>,
-        loader: () => fetch("http://localhost:5000/brands"),
+        loader: () =>
+          fetch(
+            "https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/brands"
+          ),
       },
       {
         path: "/brandProductUpdate/:id",
         element: <BrandProductUpdate></BrandProductUpdate>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brands/${params.id}`),
+          fetch(
+            `https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/brands/${params.id}`
+          ),
       },
       {
         path: "/brandProductDetails/:id",
@@ -46,7 +51,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/brands/${params.id}`),
+          fetch(
+            `https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/brands/${params.id}`
+          ),
       },
       {
         path: "/myCart",
@@ -55,7 +62,10 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/carts"),
+        loader: () =>
+          fetch(
+            "https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/carts"
+          ),
       },
       {
         path: "/login",

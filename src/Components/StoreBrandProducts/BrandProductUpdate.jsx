@@ -31,13 +31,16 @@ const BrandProductUpdate = () => {
       rating,
     };
     console.log(updateProduct);
-    fetch(`http://localhost:5000/brands/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateProduct),
-    })
+    fetch(
+      `https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/brands/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

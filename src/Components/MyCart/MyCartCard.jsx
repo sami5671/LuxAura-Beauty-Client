@@ -16,9 +16,12 @@ const MyCartCard = ({ myCart, carts, setCarts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/carts/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://luxaura-beauty-server-8k1lzmadi-samis-projects-aa838460.vercel.app/carts/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
