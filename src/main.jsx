@@ -14,6 +14,8 @@ import Login from "./Components/Providers/Login";
 import Register from "./Components/Providers/Register";
 import AuthProvider from "./Components/Providers/AuthProvider";
 import PrivateRoute from "./Components/Providers/PrivateRoute";
+import MensGrooming from "./Components/ExtraSection/MensGrooming";
+import BeautyTips from "./Components/ExtraSection/BeautyTips";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +64,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/mensgrooming",
+        element: <MensGrooming></MensGrooming>,
+      },
+      {
+        path: "/beautytips",
+        element: <BeautyTips></BeautyTips>,
       },
       {
         path: "/addProduct",

@@ -36,10 +36,10 @@ const NavBar = () => {
         <NavLink to="/myCart">My Cart</NavLink>
       </li>
       <li>
-        <NavLink to="/aboutUs">Men's Grooming</NavLink>
+        <NavLink to="/mensgrooming">Men's Grooming</NavLink>
       </li>
       <li>
-        <NavLink to="/aboutUs">Beauty Tips & Tutorials</NavLink>
+        <NavLink to="/beautytips">Beauty Tips & Tutorials</NavLink>
       </li>
     </>
   );
