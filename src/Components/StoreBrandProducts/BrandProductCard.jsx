@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const BrandProductCard = ({ product }) => {
-  const { photo, name, brand, type, price, rating } = product;
+  const { _id, photo, name, brand, type, price, rating } = product;
 
   return (
-    <section className="mb-4 p-4">
+    <section className="mb-4 p-4 font-rancho">
       <div className="bg-[#F5F4F1] rounded-lg shadow-2xl">
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           <div className="w-full lg:col-span-1 p-4">
@@ -29,8 +31,12 @@ const BrandProductCard = ({ product }) => {
               Price: <span className="text-amber-900">{price}</span>
             </p>
             <div className="flex justify-between mt-4">
-              <button className="btn btn-ghost">Details</button>
-              <button className="btn btn-ghost">Update</button>
+              <Link to={`/brandProductDetails/${_id}`}>
+                <button className="btn btn-ghost">Details</button>
+              </Link>
+              <Link to={`/brandProductUpdate/${_id}`}>
+                <button className="btn btn-ghost">Update</button>
+              </Link>
             </div>
           </div>
         </div>

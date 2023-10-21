@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const links = (
   <>
@@ -9,7 +9,7 @@ const links = (
       <NavLink to="/addProduct">Add Product</NavLink>
     </li>
     <li>
-      <NavLink to="/aboutUs">My Cart</NavLink>
+      <NavLink to="/myCart">My Cart</NavLink>
     </li>
     <li>
       <NavLink to="/aboutUs">Men's Grooming</NavLink>
@@ -64,7 +64,9 @@ const NavBar = () => {
           </div>
 
           {/* sign in and out */}
-          <button className="btn btn-ghost">Login</button>
+          <Link to="/login">
+            <button className="btn btn-ghost">Login</button>
+          </Link>
           {/* checking the user is present(if present the Button will show logout otherwise will show login in the system) */}
 
           {/* sign in and out */}

@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <section>
-        <section className="bg-slate-100 flex flex-col lg:flex-row justify-center lg:mt-12 px-12 py-12">
+        <section className="bg-slate-100 flex flex-col lg:flex-row justify-center lg:mt-12 px-12 py-12 font-rancho">
           <div className="text-center lg:text-left lg:w-1/2 lg:pr-12">
             <img
               className="w-[100px] h-[100px] text-center"

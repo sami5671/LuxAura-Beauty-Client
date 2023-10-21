@@ -44,15 +44,21 @@ const AddProduct = () => {
       });
   };
   // =================================================================
+  const bgStyle = {
+    backgroundImage: `url('https://imgur.com/Pt3aVTv.jpg')`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    position: "relative",
+  };
+
   return (
     <>
-      <section className="container mx-auto mt-12">
-        <div className="bg-[#F4F3F0] p-24">
-          <h2 className="text-5xl font-extrabold font-rancho text-[#374151] text-center mb-4">
-            Add a Product
+      <section className="container mx-auto mt-12 font-rancho">
+        <div style={bgStyle} className="bg-[#fef1ff] p-4 md:p-24">
+          <h2 className="text-5xl font-extrabold font-rancho text-black text-center mb-4">
+            Add Product
           </h2>
           <form onSubmit={handleProduct}>
-            {/* form Photo url row */}
             <div className="mb-8">
               <div className="form-control w-full">
                 <label className="label">
@@ -68,7 +74,6 @@ const AddProduct = () => {
                 </label>
               </div>
             </div>
-            {/* form name and quantity row */}
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
                 <label className="label">
@@ -83,7 +88,7 @@ const AddProduct = () => {
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 mt-4 md:mt-0">
                 <label className="label">
                   <span className="label-text">Brand Name</span>
                 </label>
@@ -97,7 +102,6 @@ const AddProduct = () => {
                 </label>
               </div>
             </div>
-            {/* form supplier row */}
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
                 <label className="label">
@@ -107,14 +111,14 @@ const AddProduct = () => {
                   <input
                     type="text"
                     name="type"
-                    placeholder="product type"
+                    placeholder="Product Type"
                     className="input input-bordered w-full"
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 mt-4 md:mt-0">
                 <label className="label">
-                  <span className="label-text">Product Price </span>
+                  <span className="label-text">Product Price</span>
                 </label>
                 <label className="input-group">
                   <input
@@ -126,22 +130,21 @@ const AddProduct = () => {
                 </label>
               </div>
             </div>
-            {/* form category and details row */}
             <div className="md:flex mb-8">
               <div className="form-control md:w-1/2">
                 <label className="label">
-                  <span className="label-text">Short description</span>
+                  <span className="label-text">Short Description</span>
                 </label>
                 <label className="input-group">
                   <input
                     type="text"
                     name="description"
-                    placeholder="description"
+                    placeholder="Description"
                     className="input input-bordered w-full"
                   />
                 </label>
               </div>
-              <div className="form-control md:w-1/2 ml-4">
+              <div className="form-control md:w-1/2 mt-4 md:mt-0">
                 <label className="label">
                   <span className="label-text">Rating</span>
                 </label>
@@ -149,7 +152,7 @@ const AddProduct = () => {
                   <input
                     type="text"
                     name="rating"
-                    placeholder="rating"
+                    placeholder="Rating"
                     className="input input-bordered w-full"
                   />
                 </label>
@@ -158,7 +161,7 @@ const AddProduct = () => {
             <input
               type="submit"
               value="Add the Product"
-              className="btn btn-block bg-amber-800 text-white hover:text-black"
+              className="btn btn-block bg-pink-400 text-white hover:text-black"
             />
           </form>
         </div>
