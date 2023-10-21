@@ -1,25 +1,48 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
+import { useContext } from "react";
+import swal from "sweetalert";
+import userPicture from "../../assets/userpic.jpg";
 
-const links = (
-  <>
-    <li>
-      <NavLink to="/">Home</NavLink>
-    </li>
-    <li>
-      <NavLink to="/addProduct">Add Product</NavLink>
-    </li>
-    <li>
-      <NavLink to="/myCart">My Cart</NavLink>
-    </li>
-    <li>
-      <NavLink to="/aboutUs">Men's Grooming</NavLink>
-    </li>
-    <li>
-      <NavLink to="/aboutUs">Beauty Tips & Tutorials</NavLink>
-    </li>
-  </>
-);
 const NavBar = () => {
+  // destructure the AuthContext
+  const { user, logout } = useContext(AuthContext);
+  // =================================================================
+  // ==========================For Logging out =================================================
+  const handleLogout = () => {
+    logout()
+      .then(() => {
+        swal({
+          text: "Successfully Registered",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        swal({
+          text: ("Have some issues", error.message),
+        });
+      });
+  };
+  // =================================================================
+  const links = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/addProduct">Add Product</NavLink>
+      </li>
+      <li>
+        <NavLink to="/myCart">My Cart</NavLink>
+      </li>
+      <li>
+        <NavLink to="/aboutUs">Men's Grooming</NavLink>
+      </li>
+      <li>
+        <NavLink to="/aboutUs">Beauty Tips & Tutorials</NavLink>
+      </li>
+    </>
+  );
   return (
     <>
       {/* navbar start here */}
@@ -64,11 +87,30 @@ const NavBar = () => {
           </div>
 
           {/* sign in and out */}
-          <Link to="/login">
-            <button className="btn btn-ghost">Login</button>
-          </Link>
-          {/* checking the user is present(if present the Button will show logout otherwise will show login in the system) */}
 
+          {/* checking the user is present(if present the Button will show logout otherwise will show login in the system) */}
+          {user ? (
+            <>
+              <div>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-6 lg:w-10 rounded-full">
+                    <img src={user.photoURL || userPicture} alt="" />
+                  </div>
+                </label>
+              </div>
+              <div className="hidden lg:block">
+                <span>{user.displayName || user.email}</span>
+              </div>
+
+              <button onClick={handleLogout} className="btn btn-ghost">
+                LOG OUT
+              </button>
+            </>
+          ) : (
+            <Link to="/login">
+              <button className="btn font-bold">LOGIN HERE</button>
+            </Link>
+          )}
           {/* sign in and out */}
         </div>
         {/* Navbar end here  */}

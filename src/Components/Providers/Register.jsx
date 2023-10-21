@@ -1,5 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import { AuthContext } from "./AuthProvider";
 
 const Register = () => {
   // ====================Adding the background Style=================
@@ -18,6 +20,53 @@ const Register = () => {
     background: "rgba(0, 0, 0, 0.5)",
   };
   // ====================Adding the background Style=================
+  const navigate = useNavigate();
+  // ====================Destructuring the object=======================================
+  const { createUser } = useContext(AuthContext);
+  // =====================For getting the value from user=========================================================
+  const handleRegister = (event) => {
+    event.preventDefault();
+    // const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    // =====================clear the input field============================================
+    event.target.email.value = "";
+    event.target.password.value = "";
+    // ==================================================================================
+    // Check The password is less than 6 characters, don't have a capital letter, don't have a special character
+    if (password.length < 6) {
+      swal({
+        text: "Password is less than 6 characters!!!!!",
+      });
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      swal({
+        text: "Password must be at least One UpperCase Character!!!!!",
+      });
+      return;
+    } else if (!/^(?=.*[A-Z])(?=.*[^A-Za-z0-9]).{6,}$/.test(password)) {
+      swal({
+        text: "Password must be at least One Special Character!!!!!",
+      });
+      return;
+    }
+    //==================Create user in firebase==============================================================
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        swal({
+          text: "Successfully Registered",
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+        swal({
+          text: ("Have some issues", error.message),
+        });
+      });
+  };
   return (
     <div className="mb-12 p-12" style={bgStyle}>
       <div style={overlayStyle}></div>
@@ -27,7 +76,7 @@ const Register = () => {
         </div>
         <div className="card flex-shrink-0 lg:w-full lg:max-w-sm shadow-2xl">
           <div className="card-body">
-            <form>
+            <form onSubmit={handleRegister}>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-white font-bold">Name</span>
