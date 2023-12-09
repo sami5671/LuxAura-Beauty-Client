@@ -55,10 +55,17 @@ const BrandProductUpdate = () => {
       });
   };
   // =================================================================
+
+  const bgStyle = {
+    backgroundImage: `url('https://imgur.com/87zA6pK.jpg')`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    position: "relative",
+  };
   return (
     <section className="container mx-auto mt-12 font-rancho">
-      <div className="bg-[#fef1ff] p-4 md:p-24">
-        <h2 className="text-5xl font-extrabold font-rancho text-[#374151] text-center mb-4">
+      <div style={bgStyle} className="p-4 md:p-24">
+        <h2 className="text-5xl font-extrabold font-rancho text-[#fafcff] text-center mb-4">
           Update Your Existing Product
         </h2>
         <form onSubmit={handleUpdate}>

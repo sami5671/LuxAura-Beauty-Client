@@ -5,11 +5,11 @@ const BeautyTips = () => {
         <img
           src="https://imgur.com/gwnhtCp.png"
           alt="Beauty Tips Banner"
-          className="w-full h-auto"
+          className="w-full lg:h-[450px]"
         />
       </div>
 
-      <div className="px-4">
+      <div className="px-4" data-aos="zoom-out">
         <h1 className="text-3xl font-bold mb-4">
           Enhance your natural glow with these simple steps
         </h1>

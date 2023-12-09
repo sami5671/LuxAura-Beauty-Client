@@ -5,12 +5,16 @@ const BrandProductCard = ({ product }) => {
 
   return (
     <section className="mb-4 p-4 font-rancho">
-      <div className="bg-[#F5F4F1] rounded-lg shadow-2xl">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          <div className="w-full lg:col-span-1 p-4">
-            <img src={photo} className="w-full h-auto" alt={name} />
+      <div className="rounded-lg shadow-2xl" data-aos="zoom-out">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="w-full lg:col-span-1 flex justify-center items-center">
+            <img
+              src={photo}
+              className="w-[200px] h-[190px] rounded-lg"
+              alt={name}
+            />
           </div>
-          <div className="w-full lg:col-span-1 p-4">
+          <div className="w-full lg:col-span-1 p-4 flex flex-col justify-between">
             <h1 className="text-xl">
               <span className="font-bold">Product Name: </span>
               <span className="text-[5C5B5B]">{name}</span>
@@ -30,12 +34,12 @@ const BrandProductCard = ({ product }) => {
             <p className="text-2xl">
               Price: <span className="text-amber-900">{price}</span>
             </p>
-            <div className="flex justify-between mt-4">
+            <div className="mt-auto">
               <Link to={`/brandProductDetails/${_id}`}>
                 <button className="btn btn-ghost">Details</button>
               </Link>
               <Link to={`/brandProductUpdate/${_id}`}>
-                <button className="btn btn-ghost">Update</button>
+                <button className="btn btn-ghost mt-2">Update</button>
               </Link>
             </div>
           </div>

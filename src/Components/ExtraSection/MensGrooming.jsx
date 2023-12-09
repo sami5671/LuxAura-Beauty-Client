@@ -20,7 +20,7 @@ const MensGrooming = () => {
         </div>
         <div className="text-center">
           <h1 className="text-6xl"> Hair</h1>
-          <p>
+          <p data-aos="zoom-out">
             Since the 1950s, men have made statements with their hair.
             Hairstyles like the pompadour landed on the scene, bringing men’s
             hairstyles into fashion for bad boys and celebrities like Elvis
@@ -42,7 +42,7 @@ const MensGrooming = () => {
         </div>
         <div className="text-center">
           <h1 className="text-6xl">Skin </h1>
-          <p>
+          <p data-aos="zoom-out">
             Your skin doesn’t end at your neck, nor does the need to care for
             it. Men tend to neglect our skin below the neck because it is under
             the clothes, and no one sees it anyway, right? We have been duped
@@ -61,7 +61,7 @@ const MensGrooming = () => {
         </div>
         <div className="text-center mb-6">
           <h1 className="text-6xl"> Fragrance</h1>
-          <p>
+          <p data-aos="zoom-out">
             The truth is, your natural body musk is probably not what you hope
             it is. It is essential that you find the right scent that is subtle
             but noticeable, never overpowering. Technically, you should have

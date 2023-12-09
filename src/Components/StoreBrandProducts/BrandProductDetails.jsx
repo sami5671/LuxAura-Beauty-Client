@@ -7,6 +7,9 @@ const BrandProductDetails = () => {
   const product = useLoaderData();
   const { _id, photo, name, brand, type, price, description, rating } = product;
 
+  // =================================================================
+
+  //  =================================================================
   const handleOnCart = () => {
     const addToCart = {
       photo,

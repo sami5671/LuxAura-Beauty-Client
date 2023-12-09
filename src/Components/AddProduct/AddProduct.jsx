@@ -48,7 +48,7 @@ const AddProduct = () => {
   };
   // =================================================================
   const bgStyle = {
-    backgroundImage: `url('https://imgur.com/Pt3aVTv.jpg')`,
+    backgroundImage: `url('https://imgur.com/xaJoMUg.jpg')`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     position: "relative",
