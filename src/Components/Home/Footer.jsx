@@ -36,28 +36,6 @@ const Footer = () => {
               <AiFillLinkedin className="text-[#ee5ca8] text-5xl" />
             </div>
           </div>
-          <div className="lg:w-1/2 px-6 lg:pl-0 mt-8 lg:mt-0">
-            <h1 className="text-[#ee5ca8] font-rancho text-4xl font-bold">
-              Get in Touch
-            </h1>
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full lg:w-80 mt-2"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full lg:w-80 mt-2"
-            />
-            <textarea
-              placeholder="Message"
-              className="w-full lg:w-80 h-24 lg:h-[120px] mt-2"
-            ></textarea>
-            <button className="btn btn-ghost rounded-lg text-[#ee5ca8] font-rancho mt-4">
-              Send Message
-            </button>
-          </div>
         </section>
         <div className="bg-pink-500 font-rancho text-center py-2">
           <h1 className="text-2xl text-white">
